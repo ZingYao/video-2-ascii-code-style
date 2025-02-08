@@ -1,0 +1,24 @@
+{
+  "name": "WebSDKTest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "http-server": "^14.1.1",
+    "xy-ui": "^1.10.7"
+  },
+  "devDependencies": {
+    "vite": "^6.1.0",
+    "vite-plugin-copy": "^0.1.6"
+  }
+}
