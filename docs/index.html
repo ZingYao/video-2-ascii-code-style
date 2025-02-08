@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Video To ASCII Player
+    </title>
+  <script type="module" crossorigin src="/assets/index-B_xvTz-n.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BH7cOo3N.css">
+</head>
+
+<body>
+    <div class="operation-area">
+        <div>
+            <xy-button id="chooseVideo">选择视频文件</xy-button>
+        </div>
+        <div>
+            <span style="margin-right: 10px;">生成视频质量:</span>
+            <xy-radio-group name="fps" id="fps" value="中">
+                <xy-radio>低</xy-radio>
+                <xy-radio id="fpsDefaultSwitch" checked>中</xy-radio>
+                <xy-radio>高</xy-radio>
+            </xy-radio-group>
+            <xy-checkbox id="colorfulSwitch" style="margin-left: 15px;" checked>彩色code视频</xy-checkbox>
+        </div>
+        <div>
+            <span style="margin-right: 10px;">视频符号风格:</span>
+            <xy-radio-group name="style" id="style" value="字母数字">
+                <xy-radio>几何形状</xy-radio>
+                <xy-radio id="styleDefaultSwitch" checked>字母数字</xy-radio><span>(适用彩色视频)</span>
+                <xy-radio>特殊字符</xy-radio><span>(适用彩色视频)</span>
+                <xy-radio>混合符号</xy-radio><span>(适用彩色视频)</span>
+                <xy-radio>自定义符号</xy-radio>
+            </xy-radio-group>
+        </div>
+        <div id="customView" style="display: none;">
+            <span id="inputCount"></span>
+            <input id="customSymbols" style="width: 90vw;" placeholder="请连续输入能被256整除的符号,符号应当由显示密度排序，数量多余4个且数量越多排列越整齐效果越好" />
+        </div>
+        <div>
+            <xy-button id="convertBtn" type="primary" class="convert-btn" disabled>开始转换</xy-button>
+        </div>
+        <div>
+            <xy-button id="displayLog" type="flat">显示日志</xy-button>
+            <xy-button id="clearLog" type="primary" danger="true" style="display: none;">清除日志</xy-button>
+        </div>
+    </div>
+    <div class="log-area" id="logView" style="display: none;">
+        <div class="log-lines">1<br /></div>
+        <div class="log-content"></div>
+    </div>
+    <div id="display" style="width: 100vw">
+        <canvas id="progress" width="1000px" style="margin-left: calc((90vw - 1000px) / 2);"></canvas>
+        <video id="player" controls width="90%" style="display: none;margin-left: 5%;"></video>
+    </div>
+
+</body>
+
+</html>
