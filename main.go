@@ -59,7 +59,7 @@ func launchBrowser(url string) {
 		}
 	case "windows":
 		// 执行命令打开浏览器
-		cmd := exec.Command("start", url)
+		cmd := exec.Command("cmd", "/c", "start", url)
 		err := cmd.Start()
 		if err != nil {
 			log.Printf("打开浏览器失败:%v,请自行打开浏览器进行访问", err)
